@@ -1,0 +1,73 @@
+.airport-board__content {
+  width: 100%;
+  padding: 0 2em;
+
+  & .flights {
+    margin-top: 2em;
+
+    &__list {
+      width: 100%;
+      border-collapse: collapse;
+      & th,
+      & td {
+        padding: 0 0.5em;
+        text-align: left;
+      }
+      & thead {
+        background-color: #ffffff;
+        & tr {
+          height: 6em;
+          vertical-align: bottom;
+          line-height: 2em;
+          color: #ddd;
+        }
+      }
+      & .no-flights {
+        text-align: center;
+        padding: 21px;
+        font-size: 22px;
+        color: #5d5656;
+      }
+      &__item {
+        height: 30px;
+        &:nth-child(even) {
+          background-color: #ffffff;
+        }
+        & td {
+          padding: 0.5em 0;
+        }
+        &_terminal {
+          text-align: center;
+          & span {
+            display: block;
+            text-align: center;
+            border: 2px solid #00ff00;
+            width: 40px;
+            height: 40px;
+            color: #00ff00;
+            border-radius: 50%;
+            line-height: 36px;
+            margin: 0 auto;
+          }
+          &.blue span{
+            border: 2px solid #1eb7ee;
+            color: #1eb7ee;
+          }
+        }
+
+        &_airline {
+          white-space: nowrap;
+          & img {
+            max-width: 50px;
+            vertical-align: middle;
+          }
+          & span {
+            max-width: 50%;
+            vertical-align: middle;
+            margin-left: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}

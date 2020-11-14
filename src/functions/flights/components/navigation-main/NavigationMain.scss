@@ -1,0 +1,46 @@
+.flights__navigation {
+  background-color: #73d2f0;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+  &:hover {
+    background-color: #1eb7ee;
+  }
+  & a {
+    width: 50%;
+  }
+  & .navigation__btn {
+    background-color: #73d2f0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    color: #ffffff;
+    border-top-right-radius: 45px;
+    border-top-left-radius: 45px;
+    cursor: pointer;
+    &:hover {
+      background-color: #1eb7ee;
+    }
+    &.selected {
+      background-color: #ffffff;
+      color: #1eb7ee;
+      &.btn_departures {
+        -webkit-animation: 1s linear forwards change_border_top_right_radius;
+        -moz-animation: 1s linear forwards change_border_top_right_radius;
+        -o-animation: 1s linear forwards change_border_top_right_radius;
+        animation: 1s linear forwards change_border_top_right_radius;
+      }
+      &.btn_arrivals {
+        -webkit-animation: 1s linear forwards change_border_top_left_radius;
+        -moz-animation: 1s linear forwards change_border_top_left_radius;
+        -o-animation: 1s linear forwards change_border_top_left_radius;
+        animation: 1s linear forwards change_border_top_left_radius;
+      }
+    }
+  }
+}

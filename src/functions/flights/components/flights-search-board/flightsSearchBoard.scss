@@ -1,0 +1,56 @@
+.airport-board {
+  &__header {
+    width: 100%;
+    padding: 0 8em;
+
+    & .searach-flight {
+      width: 100%;
+      position: relative;
+
+      & .search-icon {
+        position: absolute;
+        top: calc(50% - 0.5em);
+        left: 17px;
+        margin-right: 17px;
+        color: #ddd;
+      }
+
+      &__input {
+        width: calc(100% - 120px);
+        height: 50px;
+        border: none;
+        outline: none;
+        padding-left: 3em;
+        letter-spacing: 0.1em;
+        &::placeholder {
+          color: #ddd;
+        }
+      }
+      &__btn {
+        width: 120px;
+        height: 50px;
+        border: none;
+        outline: none;
+        background-color: #1eb7ee;
+        text-transform: uppercase;
+        color: #ffffff;
+        text-align: left;
+        padding-left: 1em;
+        border-top-right-radius: 45px;
+        &:hover {
+          -webkit-animation: 0.2s linear forwards change_border_top_right_radius;
+          -moz-animation: 0.2s linear forwards change_border_top_right_radius;
+          -o-animation: 0.2s linear forwards change_border_top_right_radius;
+          animation: 0.2s linear forwards change_border_top_right_radius;
+        }
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 3em;
+  }
+}

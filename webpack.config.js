@@ -49,7 +49,7 @@ module.exports = (env, argv) => {
   if (isProduction) {
     config.plugins.push(
       new MiniCssExtractPlugin({
-        filename: "[name].scss",
+        filename: "[name].css",
       })
     );
   }

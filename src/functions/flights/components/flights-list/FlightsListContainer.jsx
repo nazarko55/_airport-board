@@ -23,7 +23,7 @@ const FlightsListContainer = props => {
       .filter(flight =>
         flight.flightN.toLowerCase().includes(selectedFlight.toLowerCase()))
     : props[direction];
-  console.log(props[direction]);
+
 
   return (
     <main className="airport-board__content">

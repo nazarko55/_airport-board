@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Link, useLocation } from 'react-router-dom';
-import './navigationMain.scss';
+import './navigationStyle.scss';
 
 const NavigationMain = () => {
   const { search, pathname } = useLocation();

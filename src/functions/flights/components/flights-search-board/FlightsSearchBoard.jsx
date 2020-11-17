@@ -20,6 +20,7 @@ const FlightsSearchPanel = ({ selectedFlight, changeSelectedFlight }) => {
       changeSelectedFlight(initialSelectedFlight)
     }
   }, [search])
+  //debugger;
 
   return (
     <header className='airport-board__header'>

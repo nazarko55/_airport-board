@@ -9,6 +9,13 @@ import { fetchFlightsList } from "../../flights.actions";
 import { arrivalsSelector, departuresSelector, dateSelector } from "../../flights.selectors";
 import './flightsList.scss'
 
+// 1 - принимаем наши свойства
+// 2 - делаем запрос за данными
+// 3 - считываем значение с инпута и передаем в query parametr
+// 4 - парсим наш url и чтобы обойти начальный вопросительный знак, используем ignoreQueryPrefix
+// 5 - далее отрисовуем нашы свойства, делаем фильтрацию по нижнему регистру для каждого номера самолета если операция ложная отрисовуем все маршруты
+// 6 - начальный путь по умолчанию null при выборе направления отрисовуем компоненту
+
 const FlightsListContainer = props => {
 
   useEffect(() => props.fetchFlightsList(props.date), [])
@@ -24,6 +31,7 @@ const FlightsListContainer = props => {
         flight.flightN.toLowerCase().includes(selectedFlight.toLowerCase()))
     : props[direction];
 
+  // debugger;
 
   return (
     <main className="airport-board__content">
@@ -56,4 +64,5 @@ FlightsListContainer.propTypes = {
   date: PropTypes.string.isRequired,
   fetchFlightsList: PropTypes.func.isRequired
 };
+
 export default connect(mapState, mapDispatch)(FlightsListContainer)
